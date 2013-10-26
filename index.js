@@ -1,3 +1,5 @@
+process.chdir(__dirname);
+
 var express = require('express');
 var app = express();
 var Poet = require('poet');
