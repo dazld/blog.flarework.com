@@ -67,4 +67,4 @@ app.get('/post/', function(req, res) {
 	});
 });
 
-app.listen(3030);
+app.listen(3030, '127.0.0.1');
