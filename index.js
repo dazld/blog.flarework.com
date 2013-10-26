@@ -10,11 +10,21 @@ var poet = Poet(app, {
 	metaFormat: 'json'
 });
 
-
+poet.addRoute('/posts/:post',function(req,res){
+	var post = poet.helpers.getPost(req.params.post);
+	if (post) {
+		// Do some fancy logging here
+		res.render('post', {
+			title: post.title,
+			post: post
+		});
+	} else {
+		res.send(404);
+	}
+});
 
 poet.watch().init(function(){
-	
-	
+	console.log('up and running: ', new Date());
 });
 
 app.set('views', __dirname + '/views');
@@ -23,6 +33,12 @@ app.use(express.static(__dirname + '/public'));
 app.use(app.router);
 app.use(handle404);
 
+app.get('/rss', function (req, res) {
+  // Only get the latest posts
+  var posts = poet.helpers.getPosts(0, 5);
+  res.setHeader('Content-Type', 'application/rss+xml');
+  res.render('rss', { posts: posts });
+});
 
 // app.configure('development', function() {
 	app.use(express.errorHandler({
@@ -37,6 +53,13 @@ app.use(handle404);
 
 
 app.get('/', function(req, res) {
+	res.render('index', {
+		title: 'flarework'
+	});
+});
+
+
+app.get('/post/', function(req, res) {
 	res.render('index', {
 		title: 'flarework'
 	});

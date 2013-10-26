@@ -3,6 +3,7 @@
     "poet": "~1.0.0-rc3",
     "express": "~3.4.0",
     "jade": "~0.35.0",
-    "lodash": "~2.2.1"
+    "lodash": "~2.2.1",
+    "highlight.js": "~7.3.0"
   }
 }
