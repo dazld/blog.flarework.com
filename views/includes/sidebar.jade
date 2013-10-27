@@ -3,3 +3,8 @@
 		h2 flarework blog
 	p some words
 		
+	h4 All Tags
+	
+	- each tag in getTags().sort()	
+			a(href=tagUrl(tag))
+				span.tag.label-info #{tag}

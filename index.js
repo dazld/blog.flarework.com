@@ -59,6 +59,14 @@ app.get('/', function(req, res) {
 	});
 });
 
+app.get('/sitemap.xml', function (req, res) {
+  // Only get the latest posts
+  var postCount = poet.helpers.getPostCount();
+  var posts = poet.helpers.getPosts(0, postCount);
+  res.setHeader('Content-Type', 'application/xml');
+  res.render('pages/sitemap', { posts: posts });
+});
+
 app.get('/about', function(req, res) {
 	res.render('pages/about', {
 		title: 'About'
