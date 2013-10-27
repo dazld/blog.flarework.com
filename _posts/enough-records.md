@@ -21,7 +21,7 @@ I tried to come up with a neat way to recommend releases. Each release has a sel
 
 In the end, I used Levenshtein distance between the sorted tag arrays converted to a string, and 90% of the time this works pretty well in finding things that are more closely related. When the tag list grows though, the approach does not work so well, but have a few ideas about how to fix that. 
 
-Enough has some amazing releases, some quite challenging - covering topics like freedom of speech, oppression, raw creativity and sonic ingenuity. I really recommend checking out releases from Varia, M-Pex, Jari Pitkänen, the Enough Dubs compilations. I hope the work I did with this site does justice to their spectacular creativity, and Filipe Cruz's (aka ps, the curator and founder of the site, who also helped out with some dev work) vision in releasing their music under the Enough records label.
+Enough has some amazing releases, some quite challenging - covering topics like freedom of speech, oppression, raw creativity and sonic ingenuity. I really recommend checking out releases from Varia, M-Pex, Jari Pitkänen, the Enough Dubs compilations. I hope the work I did with this site does justice to their spectacular creativity, and Filipe Cruz's (aka ps, the curator and founder of the site, who also helped out with some dev work) vision in releasing their music under the Enough Records label.
 
 Go [check it out](http://enoughrecords.scene.org). 
 
