@@ -6,9 +6,14 @@ html(lang="en")
     script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js")
   body
     #topbar
-        a(href="/") le blog
+        a(href="/") home
+        a(href="/about") about
+        a(href="/about") projects
+        a(href="/about") twitter
     #main 
-        block content
+        include ../includes/sidebar
+        #content
+            block content
     #footer
         span powered by node.js, poet and some edgy sunglasses
     script.

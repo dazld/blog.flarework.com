@@ -42,21 +42,26 @@ app.get('/rss', function (req, res) {
   res.render('rss', { posts: posts });
 });
 
-// app.configure('development', function() {
+app.configure('development', function() {
 	app.use(express.errorHandler({
 		dumpExceptions: true,
 		showStack: true
 	}));
-// });
+});
 
-// app.configure('production', function() {
-// 	app.use(express.errorHandler());
-// });
-
+app.configure('production', function() {
+	app.use(express.errorHandler());
+});
 
 app.get('/', function(req, res) {
 	res.render('index', {
 		title: 'flarework'
+	});
+});
+
+app.get('/about', function(req, res) {
+	res.render('pages/about', {
+		title: 'About'
 	});
 });
 
