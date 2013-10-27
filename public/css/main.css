@@ -79,6 +79,10 @@ h1,h2,h3,h4 {
 
 }
 
+.mobile-img {
+	width: 320px;
+}
+
 #footer {
 	position: absolute;
 	left: 0;
@@ -91,14 +95,18 @@ h1,h2,h3,h4 {
 	padding: 0 12px;	
 }
 
+.post img {
+	max-width: 100%;
+}
+
 .tag {
 	display: inline-block;
-padding: 4px 8px;
-border-radius: 0 4px 0 4px;
-background: #AAA;
-color: #FFF;
-margin-right: 8px;
-font-size: 15px;
-font-weight: 700;
-line-height: 18px;
+	padding: 4px 8px;
+	border-radius: 0 4px 0 4px;
+	background: #AAA;
+	color: #FFF;
+	margin-right: 8px;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 18px;
 }

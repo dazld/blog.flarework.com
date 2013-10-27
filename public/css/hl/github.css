@@ -5,6 +5,12 @@ Adjusted to use Droid Sans Mono by @danpeddle
 
 */
 
+code {
+  background: #f8f8ff;
+  font-family: 'Droid Sans Mono';
+  font-size: 12px;
+}
+
 pre code {
   display: block; padding: 0.5em;
   color: #333;
